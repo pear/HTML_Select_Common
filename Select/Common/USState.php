@@ -54,8 +54,8 @@ class HTML_Select_Common_USState
     {
         $this->_states['ak'] = 'Alabama';
         $this->_states['al'] = 'Alaska';
-        $this->_states['ar'] = 'Arizona';
-        $this->_states['az'] = 'Arkansas';
+        $this->_states['az'] = 'Arizona';
+        $this->_states['ar'] = 'Arkansas';
         $this->_states['ca'] = 'California';
         $this->_states['co'] = 'Colorado';
         $this->_states['ct'] = 'Connecticut';
@@ -71,7 +71,7 @@ class HTML_Select_Common_USState
         $this->_states['ks'] = 'Kansas';
         $this->_states['ky'] = 'Kentucky';
         $this->_states['la'] = 'Louisiana';
-        $this->_states['ma'] = 'Maine';
+        $this->_states['me'] = 'Maine';
         $this->_states['md'] = 'Maryland';
         $this->_states['ma'] = 'Massachusetts';
         $this->_states['mi'] = 'Michigan';
@@ -81,7 +81,6 @@ class HTML_Select_Common_USState
         $this->_states['mt'] = 'Montana';
         $this->_states['ne'] = 'Nebraska';
         $this->_states['nv'] = 'Nevada';
-        $this->_states['ne'] = 'New England';
         $this->_states['nh'] = 'New Hampshire';
         $this->_states['nj'] = 'New Jersey';
         $this->_states['nm'] = 'New Mexico';
