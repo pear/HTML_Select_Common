@@ -9,6 +9,7 @@ Provides &lt;select&gt;lists for:
 o Country
 o UK counties
 o US States
+o FR Departements
 	</description>
 
 	<maintainers>
@@ -22,23 +23,24 @@ o US States
 
 	<release>
 		<license>BSD</license>
-		<version>1.0</version>
-		<date>2002-10-25</date>
+		<version>1.1</version>
+		<date>2003-01-18</date>
 		<state>stable</state>
-		<notes>
-Initial release
-		</notes>
+		<notes>Updated package name, structure, and added French departements</notes>
+
 		<filelist>
-			<dir name="/" baseinstalldir="I18N">
-				<dir name="Select">
+			<dir name="/" baseinstalldir="HTML/Select">
+				<dir name="Common">
 					<file role="php" name="Country.php" />
 					<file role="php" name="UKCounty.php" />
 					<file role="php" name="USState.php" />
+					<file role="php" name="FRDepartements.php" />
 	
 					<dir name="examples">
 						<file role="php" name="Country.php" />
 						<file role="php" name="UKCounty.php" />
 						<file role="php" name="USState.php" />
+						<file role="php" name="FRDepartements.php" />
 					</dir>
 				</dir>
 			</dir>
@@ -49,5 +51,14 @@ Initial release
 		</deps>
 
 	</release>
-
+	
+	<changelog>
+		<release>
+			<license>BSD</license>
+			<version>1.0</version>
+			<date>2002-10-25</date>
+			<state>stable</state>
+			<notes>Initial release</notes>
+		</release>
+	</changelog>
 </package>
