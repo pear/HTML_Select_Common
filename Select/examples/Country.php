@@ -1,7 +1,7 @@
 <?php
-    include('HTML/Select/Country.php');
+    include('HTML/Select/Common/Country.php');
 
-    $c = new HTML_Select_Country();
+    $c = new HTML_Select_Common_Country();
 ?>
 
 <html>

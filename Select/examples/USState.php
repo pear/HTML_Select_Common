@@ -1,11 +1,11 @@
 <?php
-    include('HTML/Select/USState.php');
+    include('HTML/Select/Common/USState.php');
 
-    $c = new HTML_Select_USState();
+    $c = new HTML_Select_Common_USState();
 ?>
 
 <html>
 <body>
-    <?=$c->toHTML('state', 'utah')?>
+    <?=$c->toHTML('state', 'colorado')?>
 </body>
 </html>

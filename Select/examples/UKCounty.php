@@ -1,7 +1,7 @@
 <?php
-    include('HTML/Select/UKCounty.php');
+    include('HTML/Select/Common/UKCounty.php');
 
-    $c = new HTML_Select_UKCounty();
+    $c = new HTML_Select_Common_UKCounty();
 ?>
 
 <html>
