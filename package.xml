@@ -2,7 +2,7 @@
 <!DOCTYPE package SYSTEM "../package.dtd">
 
 <package>
-	<name>HTML_Select</name>
+	<name>HTML_Select_Common</name>
 	<summary>Some small classes to handle common &lt;select&gt; lists</summary>
 	<description>
 Provides &lt;select&gt;lists for:
