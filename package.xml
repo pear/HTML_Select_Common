@@ -29,18 +29,20 @@ o FR Departements
 		<notes>Updated package name, structure, and added French departements</notes>
 
 		<filelist>
-			<dir name="/" baseinstalldir="HTML/Select">
-				<dir name="Common">
-					<file role="php" name="Country.php" />
-					<file role="php" name="UKCounty.php" />
-					<file role="php" name="USState.php" />
-					<file role="php" name="FRDepartements.php" />
-	
-					<dir name="examples">
+			<dir name="/" baseinstalldir="HTML">
+				<dir name="Select">
+					<dir name="Common">
 						<file role="php" name="Country.php" />
 						<file role="php" name="UKCounty.php" />
 						<file role="php" name="USState.php" />
 						<file role="php" name="FRDepartements.php" />
+		
+						<dir name="examples">
+							<file role="php" name="Country.php" />
+							<file role="php" name="UKCounty.php" />
+							<file role="php" name="USState.php" />
+							<file role="php" name="FRDepartements.php" />
+						</dir>
 					</dir>
 				</dir>
 			</dir>
