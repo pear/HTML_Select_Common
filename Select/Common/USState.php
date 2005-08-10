@@ -52,8 +52,8 @@ class HTML_Select_Common_USState
     */
     function HTML_Select_Common_USState()
     {
-        $this->_states['ak'] = 'Alabama';
-        $this->_states['al'] = 'Alaska';
+        $this->_states['al'] = 'Alabama';
+        $this->_states['ak'] = 'Alaska';
         $this->_states['az'] = 'Arizona';
         $this->_states['ar'] = 'Arkansas';
         $this->_states['ca'] = 'California';
