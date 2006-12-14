@@ -40,6 +40,7 @@ o NO Kommuner
 			<dir name="/" baseinstalldir="HTML">
 				<dir name="Select">
 					<dir name="Common">
+						<file role="php" name="BRState.php" />
 						<file role="php" name="Country.php" />
 						<file role="php" name="UKCounty.php" />
 						<file role="php" name="USState.php" />
