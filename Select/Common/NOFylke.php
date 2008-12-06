@@ -52,26 +52,26 @@ class HTML_Select_Common_NOFylke
     */
     function HTML_Select_Common_NOFylke()
     {
-		$this->_fylker[] = 'Akershus';
-		$this->_fylker[] = 'Aust-Agder';
-		$this->_fylker[] = 'Buskerud';
-		$this->_fylker[] = 'Finnmark';
-		$this->_fylker[] = 'Hedmark';
-		$this->_fylker[] = 'Hordaland';
-		$this->_fylker[] = 'Møre og Romsdal';
-		$this->_fylker[] = 'Nord-Trøndelag';
-		$this->_fylker[] = 'Nordland';
-		$this->_fylker[] = 'Oppland';
-		$this->_fylker[] = 'Oslo';
-		$this->_fylker[] = 'Rogaland';
-		$this->_fylker[] = 'Sogn og Fjordane';
-		$this->_fylker[] = 'Svalbard';
-		$this->_fylker[] = 'Sør-Trøndelag';
-		$this->_fylker[] = 'Telemark';
-		$this->_fylker[] = 'Troms';
-		$this->_fylker[] = 'Vest-Agder';
-		$this->_fylker[] = 'Vestfold';
-		$this->_fylker[] = 'Østfold';
+        $this->_fylker[] = 'Akershus';
+        $this->_fylker[] = 'Aust-Agder';
+        $this->_fylker[] = 'Buskerud';
+        $this->_fylker[] = 'Finnmark';
+        $this->_fylker[] = 'Hedmark';
+        $this->_fylker[] = 'Hordaland';
+        $this->_fylker[] = 'Møre og Romsdal';
+        $this->_fylker[] = 'Nord-Trøndelag';
+        $this->_fylker[] = 'Nordland';
+        $this->_fylker[] = 'Oppland';
+        $this->_fylker[] = 'Oslo';
+        $this->_fylker[] = 'Rogaland';
+        $this->_fylker[] = 'Sogn og Fjordane';
+        $this->_fylker[] = 'Svalbard';
+        $this->_fylker[] = 'Sør-Trøndelag';
+        $this->_fylker[] = 'Telemark';
+        $this->_fylker[] = 'Troms';
+        $this->_fylker[] = 'Vest-Agder';
+        $this->_fylker[] = 'Vestfold';
+        $this->_fylker[] = 'Østfold';
     }
 
     /**
