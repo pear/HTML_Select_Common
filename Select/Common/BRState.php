@@ -1,47 +1,30 @@
 <?php
 /**
-* +-----------------------------------------------------------------------+
-* | Copyright (c) 2002 Marcelo Santos Araujo                              |
-* | All rights reserved.                                                  |
-* |                                                                       |
-* | Redistribution and use in source and binary forms, with or without    |
-* | modification, are permitted provided that the following conditions    |
-* | are met:                                                              |
-* |                                                                       |
-* | o Redistributions of source code must retain the above copyright      |
-* |   notice, this list of conditions and the following disclaimer.       |
-* | o Redistributions in binary form must reproduce the above copyright   |
-* |   notice, this list of conditions and the following disclaimer in the |
-* |   documentation and/or other materials provided with the distribution.|
-* | o The names of the authors may not be used to endorse or promote      |
-* |   products derived from this software without specific prior written  |
-* |   permission.                                                         |
-* |                                                                       |
-* | THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS   |
-* | "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT     |
-* | LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR |
-* | A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT  |
-* | OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, |
-* | SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT      |
-* | LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, |
-* | DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY |
-* | THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT   |
-* | (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE |
-* | OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.  |
-* |                                                                       |
-* +-----------------------------------------------------------------------+
-* | Author: Marcelo Santos Araujo <marcelo@orionlab.net>                  |
-* +-----------------------------------------------------------------------+
+ * Produce a HTML Select dropdown of Brazilian States
+ *
+ * PHP Version 4
+ *
+ * @category  HTML
+ * @package   HTML_Select_Common
+ * @author    Marcelo Santos Araujo <marcelo@orionlab.net>
+ * @copyright 2002 Marcelo Santos Araujo
+ * @license   BSD (see http://www.opensource.org/licenses/bsd-license.php)
+ * @version   CVS: $Id$
+ * @link      http://pear.php.net/package/HTML_Select_Common
+ */
 *
-* $Id$
-*
-* Class to produce a HTML Select dropdown of brazilian states
-*
-* @author  Marcelo Santos Araujo <marcelo@orionlab.net>
-* @access  public
-* @version 1.0
-* @package HTML_Select
-*/
+/**
+ * Class to produce a HTML Select dropdown of brazilian states
+ *
+ * @category  PEAR
+ * @package   HTML_Select_Common
+ * @author    Marcelo Santos Araujo <marcelo@orionlab.net>
+ * @copyright 2002 Marcelo Santos Araujo
+ * @access    public
+ * @license   BSD (see http://www.opensource.org/licenses/bsd-license.php)
+ * @version   CVS: $Id$
+ * @link      http://pear.php.net/package/HTML_Select_Common
+ */
 
 class HTML_Select_Common_BRState
 {
@@ -57,6 +40,7 @@ class HTML_Select_Common_BRState
     * Constructor
     *
     * @access public
+    * @return null
     */
     function HTML_Select_Common_ptBRState()
     {
@@ -92,30 +76,38 @@ class HTML_Select_Common_BRState
     /**
     * Produces the HTML for the dropdown
     *
-    * @param  string $name            The name="" attribute
-    * @param  string $selectedOption  The option to be selected by default.
-    *                                 Must match the state name exactly,
-    *                                 (though it can be a different case).
-    * @param  string $promoText       The text to appear as the first option
-    * @param  string $extraAttributes Any extra attributes for the <select> tag
+    * @param string $name            The name="" attribute
+    * @param string $selectedOption  The option to be selected by default.
+    *                                Must match the state name exactly,
+    *                                (though it can be a different case).
+    * @param string $promoText       The text to appear as the first option
+    * @param string $extraAttributes Any extra attributes for the <select> tag
+    *
     * @return string                  The HTML for the <select>
     * @access public
     */
-    function toHTML($name, $selectedOption = null, $promoText = 'Selecione um estado...', $extraAttributes = '')
-    {
+    function toHTML(
+        $name,
+        $selectedOption = null,
+        $promoText = 'Selecione um estado...',
+        $extraAttributes = ''
+    ) {
         $options[]      = sprintf('<option value="">%s</option>', $promoText);
         $selectedOption = strtolower($selectedOption);
 
         foreach ($this->_states as $state) {
             $state_lc  = strtolower($state);
             $selected  = $selectedOption == $state_lc ? ' selected="selected"' : '';
-            $options[] = '<option value="' . $state_lc . '"' . $selected . '>' . ucfirst($state) . '</option>';
+            $options[] = '<option value="' . $state_lc . '"' . $selected . '>'
+                       . ucfirst($state) . '</option>';
         }
 
-        return sprintf('<select name="%s" %s>%s</select>',
-                       $name,
-                       $extraAttributes,
-                       implode("\r\n", $options));
+        return sprintf(
+            '<select name="%s" %s>%s</select>',
+            $name,
+            $extraAttributes,
+            implode("\r\n", $options)
+        );
     }
 
     /**

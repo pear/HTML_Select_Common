@@ -1,49 +1,30 @@
 <?php
-// +-----------------------------------------------------------------------+ 
-// | Copyright (c) 2002 Richard Heyes                                     | 
-// | All rights reserved.                                                  | 
-// |                                                                       | 
-// | Redistribution and use in source and binary forms, with or without    | 
-// | modification, are permitted provided that the following conditions    | 
-// | are met:                                                              | 
-// |                                                                       | 
-// | o Redistributions of source code must retain the above copyright      | 
-// |   notice, this list of conditions and the following disclaimer.       | 
-// | o Redistributions in binary form must reproduce the above copyright   | 
-// |   notice, this list of conditions and the following disclaimer in the | 
-// |   documentation and/or other materials provided with the distribution.| 
-// | o The names of the authors may not be used to endorse or promote      | 
-// |   products derived from this software without specific prior written  | 
-// |   permission.                                                         | 
-// |                                                                       | 
-// | THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS   | 
-// | "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT     | 
-// | LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR | 
-// | A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT  | 
-// | OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, | 
-// | SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT      | 
-// | LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, | 
-// | DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY | 
-// | THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT   | 
-// | (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE | 
-// | OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.  | 
-// |                                                                       | 
-// +-----------------------------------------------------------------------+ 
-// | Author: Richard Heyes <richard@php.net>                               | 
-// |         Eric De Sousa <esc.z@wanadoo.fr>                               | 
-// +-----------------------------------------------------------------------+ 
-// 
-// $Id$
+/**
+ * Provide Select list for Departements in France
+ *
+ * PHP Version 4
+ *
+ * @category  HTML
+ * @package   HTML_Select_Common
+ * @author    Richard Heyes <richard@php.net>
+ * @author    Eric De Sousa <esc.z@wanadoo.fr>
+ * @copyright 2002 Richard Heyes <richard@php.net>
+ * @license   BSD (see http://www.opensource.org/licenses/bsd-license.php)
+ * @version   CVS: $Id$
+ * @link      http://pear.php.net/package/HTML_Select_Common
+ */
 
 /**
-* Class to produce a HTML Select dropdown of FR Departements
-*
-* @author  Richard Heyes <richard@php.net>
-* @author  Eric De Sousa <esc.z@wanadoo.fr>
-* @access  public
-* @version 1.0
-* @package HTML_Select
-*/
+ * Class to produce a HTML Select dropdown of FR Departements
+ *
+ * @category HTML
+ * @package  HTML_Select
+ * @author   Richard Heyes <richard@php.net>
+ * @author   Eric De Sousa <esc.z@wanadoo.fr>
+ * @access   public
+ * @license  BSD (see http://www.opensource.org/licenses/bsd-license.php);
+ * @link     http://pear.php.net/package/HTML_Select_Common
+ */
 
 class HTML_Select_Common_FRDepartements
 {
@@ -105,7 +86,7 @@ class HTML_Select_Common_FRDepartements
         $this->_departements['48'] = 'Lozère';
         $this->_departements['49'] = 'Maine-et-Loire';
         $this->_departements['50'] = 'Manche';
-        $this->_departements['51'] = 'Marne'; 
+        $this->_departements['51'] = 'Marne';
         $this->_departements['52'] = 'Haute-Marne';
         $this->_departements['53'] = 'Mayenne';
         $this->_departements['54'] = 'Meurthe-et-Moselle';
@@ -159,32 +140,42 @@ class HTML_Select_Common_FRDepartements
     /**
     * Produces the HTML for the dropdown
     *
-    * @param  string $name            The name="" attribute
-    * @param  string $selectedOption  The option to be selected by default.
-    *                                 Must match the departement name exactly,
-    *                                 OR departement code
-    *                                 (though it can be a different case).
-    * @param  string $promoText       The text to appear as the first option
-    * @param  string $extraAttributes Any extra attributes for the <select> tag
+    * @param string $name            The name="" attribute
+    * @param string $selectedOption  The option to be selected by default.
+    *                                Must match the departement name exactly,
+    *                                OR departement code
+    *                                (though it can be a different case).
+    * @param string $promoText       The text to appear as the first option
+    * @param string $extraAttributes Any extra attributes for the <select> tag
+    *
     * @return string                  The HTML for the <select>
     * @access public
     */
-    function toHTML($name, $selectedOption = null, $promoText = 'Selectionnez un departement...', $extraAttributes = '')
-    {
+    function toHTML(
+        $name,
+        $selectedOption = null,
+        $promoText = 'Selectionnez un departement...',
+        $extraAttributes = ''
+    ) {
         $options[]      = sprintf('<option value="">%s</option>', $promoText);
         $selectedOption = strtolower($selectedOption);
 
         foreach ($this->_departements as $code => $departement) {
             $code = strtolower($code);
             //$departements_lc  = explode(' - ',$departements_ld);
-            $selected  = ( $selectedOption == $code || $selectedOption == strtolower($departement) ) ? ' selected="selected" ' : '';
-            $options[] = '<option value="' . $code . '"' . $selected . '>' . $code . ' - ' . $departement . '</option>';
+            $selected  = ($selectedOption == $code ||
+                          $selectedOption == strtolower($departement) ) ?
+                            ' selected="selected" ' : '';
+            $options[] = '<option value="' . $code . '"' . $selected . '>' .
+                         $code . ' - ' . $departement . '</option>';
         }
-        
-        return sprintf('<select name="%s" %s>%s</select>',
-                       $name,
-                       $extraAttributes,
-                       implode("\r\n", $options));
+
+        return sprintf(
+            '<select name="%s" %s>%s</select>',
+            $name,
+            $extraAttributes,
+            implode("\r\n", $options)
+        );
     }
 }
 
