@@ -12,7 +12,7 @@
  * @version   CVS: $Id$
  * @link      http://pear.php.net/package/HTML_Select_Common
  */
-*
+
 /**
  * Class to produce a HTML Select dropdown of brazilian states
  *
