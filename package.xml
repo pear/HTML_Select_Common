@@ -10,8 +10,7 @@ o US States
 o FR Departements
 o NO Fylke
 o NO Kommuner
-o ptBR
-</description>
+o ptBR</description>
  <lead>
   <name>Derick Rethans</name>
   <user>derick</user>
@@ -25,7 +24,7 @@ o ptBR
   <active>no</active>
  </lead>
  <date>2010-10-04</date>
- <time>22:54:30</time>
+ <time>23:00:12</time>
  <version>
   <release>1.2</release>
   <api>1.2</api>
@@ -44,20 +43,16 @@ Corrected US states and added Norwegian Fylke and Kommuner
  </notes>
  <contents>
   <dir baseinstalldir="/" name="/">
-   <file baseinstalldir="/" md5sum="1ec7038bdab13ed4cc633a831aed8da0" name="HTML/Select/Common/BRState.php" role="php" />
-   <file baseinstalldir="/" md5sum="7c258e081875ed6d6a72b5e67c779a14" name="HTML/Select/Common/Country.php" role="php" />
-   <file baseinstalldir="/" md5sum="bb90cafa0df9fa6fa7c6d77016bbc2d0" name="HTML/Select/Common/FRDepartements.php" role="php" />
-   <file baseinstalldir="/" md5sum="b3ddfdd571de085aeefa97cbb4d0789b" name="HTML/Select/Common/NOFylke.php" role="php" />
-   <file baseinstalldir="/" md5sum="b06ece02e430cd3049f1c9f5934986ce" name="HTML/Select/Common/NOKommune.php" role="php" />
-   <file baseinstalldir="/" md5sum="69c8d324dc6ae8c7bee47ed327d7ed76" name="HTML/Select/Common/UKCounty.php" role="php" />
-   <file baseinstalldir="/" md5sum="7d11405566222ec11ddd753495893004" name="HTML/Select/Common/USState.php" role="php" />
-   <file baseinstalldir="/" md5sum="9a95952583688412dae84a5f58de0082" name="HTML/Select/Common/examples/Country.php" role="php" />
-   <file baseinstalldir="/" md5sum="91ad5870004e293d9b9c5043ff476aae" name="HTML/Select/Common/examples/FRDepartements.php" role="php" />
-   <file baseinstalldir="/" md5sum="7ebcdb03977641df6b218b39ea3ae219" name="HTML/Select/Common/examples/UKCounty.php" role="php" />
-   <file baseinstalldir="/" md5sum="c41e207463e4e050f4c6ceafc2b160e4" name="HTML/Select/Common/examples/USState.php" role="php" />
-   <file baseinstalldir="/" md5sum="9a95952583688412dae84a5f58de0082" name="HTML/Select/examples/Country.php" role="php" />
-   <file baseinstalldir="/" md5sum="7ebcdb03977641df6b218b39ea3ae219" name="HTML/Select/examples/UKCounty.php" role="php" />
-   <file baseinstalldir="/" md5sum="c41e207463e4e050f4c6ceafc2b160e4" name="HTML/Select/examples/USState.php" role="php" />
+   <file baseinstalldir="/" md5sum="9a95952583688412dae84a5f58de0082" name="examples/Country.php" role="doc" />
+   <file baseinstalldir="/" md5sum="7ebcdb03977641df6b218b39ea3ae219" name="examples/UKCounty.php" role="doc" />
+   <file baseinstalldir="/" md5sum="c41e207463e4e050f4c6ceafc2b160e4" name="examples/USState.php" role="doc" />
+   <file baseinstalldir="/" md5sum="885c45c7da067d7b32ea3ccf314005e6" name="HTML/Select/Common/BRState.php" role="php" />
+   <file baseinstalldir="/" md5sum="0027a619798cff61d9bb8af980922b55" name="HTML/Select/Common/Country.php" role="php" />
+   <file baseinstalldir="/" md5sum="58e47962fdee996bedbe32adb6431a7e" name="HTML/Select/Common/FRDepartements.php" role="php" />
+   <file baseinstalldir="/" md5sum="f60f2d6b61fe9bdfd2ba4ffd5326523e" name="HTML/Select/Common/NOFylke.php" role="php" />
+   <file baseinstalldir="/" md5sum="5f86a42db219a30796f4f9efbd36e988" name="HTML/Select/Common/NOKommune.php" role="php" />
+   <file baseinstalldir="/" md5sum="b818ae8c6762397b1ed2a2dcf14dc434" name="HTML/Select/Common/UKCounty.php" role="php" />
+   <file baseinstalldir="/" md5sum="6a45983e4ef23a9f92338e2e7019c491" name="HTML/Select/Common/USState.php" role="php" />
   </dir>
  </contents>
  <dependencies>
@@ -66,7 +61,7 @@ Corrected US states and added Norwegian Fylke and Kommuner
     <min>4.0.0</min>
    </php>
    <pearinstaller>
-    <min>1.9.1</min>
+    <min>1.9.0</min>
    </pearinstaller>
    <package>
     <name>I18N</name>
@@ -121,8 +116,8 @@ Updated package name, structure, and added French departements
    <notes>
 QA release
 Bug #14971 PHPCS tabs vs spaces kguest
-Request #6163   [Feature]-ptBRState - new file          cweiske
-Bug #5050 State abbreviations wrong     derick
+Request #6163  	[Feature]-ptBRState - new file  	cweiske
+Bug #5050 State abbreviations wrong  	derick
 Corrected US states and added Norwegian Fylke and Kommuner
    </notes>
   </release>
