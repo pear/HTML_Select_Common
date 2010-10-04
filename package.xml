@@ -24,9 +24,9 @@ o ptBR</description>
   <active>no</active>
  </lead>
  <date>2010-10-04</date>
- <time>23:00:12</time>
+ <time>23:00:34</time>
  <version>
-  <release>1.2</release>
+  <release>1.2.0</release>
   <api>1.2</api>
  </version>
  <stability>
