@@ -1,0 +1,34 @@
+{
+    "authors": [
+        {
+            "email": "derick@php.net",
+            "name": "Derick Rethans",
+            "role": "Lead"
+        },
+        {
+            "email": "richard@php.net",
+            "name": "Richard Heyes",
+            "role": "Lead"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
+    },
+    "description": "More info available on: http://pear.php.net/package/HTML_Select_Common",
+    "license": "BSD",
+    "name": "pear/html_select_common",
+    "support": {
+        "issues": "http://pear.php.net/bugs/search.php?cmd=display&package_name[]=HTML_Select_Common",
+        "source": "https://github.com/pear/HTML_Select_Common"
+    },
+    "type": "library",
+    "require": {
+        "pear/pear_exception": "*",
+        "pear/i18n": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
